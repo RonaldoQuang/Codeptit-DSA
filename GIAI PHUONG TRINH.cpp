@@ -11,13 +11,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main(){
-	int t; cin >> t;
-	while(t--){
-		float a, b, c; cin >> a >> b >> c;
-		float delta=-3*a*b;
-		float k=(27*a*a*c)/(2*sqrt(pow(abs(delta),3)));
-		float m=sqrt(abs(delta))/(3*a);
-		float n=cbrt(k+sqrt(k*k+1))+cbrt(k-sqrt(k*k+1));
-		cout << fixed << setprecision(4) << m*n << endl;
-	}
+    int t; cin >> t;
+    while(t--){
+	float a, b, c; cin >> a >> b >> c;
+	float delta=-3*a*b;
+	float k=(27*a*a*c)/(2*sqrt(pow(abs(delta),3)));
+	float m=sqrt(abs(delta))/(3*a);
+	float n=cbrt(k+sqrt(k*k+1))+cbrt(k-sqrt(k*k+1));
+	cout << fixed << setprecision(4) << m*n << endl;
+    }
 }
