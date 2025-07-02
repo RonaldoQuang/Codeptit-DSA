@@ -18,10 +18,10 @@
 #include <bits/stdc++.h>
 using namespace std;
 long long tong(long long n){
-	return n*(n-1)/2;
+    return n*(n-1)/2;
 }
 int main(){
-	long long x, y, z; cin >> x >> y;
+    long long x, y, z; cin >> x >> y;
     long long a=x+y-1;
     cout << 1+tong(a)+a-x << endl;
     cin >> z;
