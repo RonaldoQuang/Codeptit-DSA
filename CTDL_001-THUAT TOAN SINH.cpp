@@ -15,41 +15,41 @@
 #include <bits/stdc++.h>
 using namespace std;
 void kt(int a[100], int n){
-	for(int i=0;i<n;i++){
-		a[i]=0;
-	}
+    for(int i=0;i<n;i++){
+	a[i]=0;
+    }
 }
 int sinh(int a[100], int n){
-	int i=n-1;
-	while(i>=0&&a[i]==1){
-		a[i]=0;
-		--i;
-	}
-	if(i==-1) return 0;
-	else{
-		a[i]=1;
-		return 1;
-	}
+    int i=n-1;
+    while(i>=0&&a[i]==1){
+	a[i]=0;
+	--i;
+    }
+    if(i==-1) return 0;
+    else{
+	a[i]=1;
+	return 1;
+    }
 }
 int check(int a[100], int n){
-	for(int i=0;i<n/2;i++){
-		if(a[i]!=a[n-1-i]) return 0;
-	}
-	return 1;
+    for(int i=0;i<n/2;i++){
+	if(a[i]!=a[n-1-i]) return 0;
+    }
+    return 1;
 }
 int main(){
-	int n; cin >> n;
-	int a[100];
-	int x=1;
-	kt(a,n);
-	while(x){
-		if(check(a,n)){
-			for(int i=0;i<n;i++){
-			    cout << a[i] << " ";
-		    }
-		    cout << endl << endl;
-		}
-		if(sinh(a,n)) x=1;
-		else x=0;
+    int n; cin >> n;
+    int a[100];
+    int x=1;
+    kt(a,n);
+    while(x){
+	if(check(a,n)){
+	    for(int i=0;i<n;i++){
+		cout << a[i] << " ";
+	    }
+	    cout << endl << endl;
 	}
+	if(sinh(a,n)) x=1;
+	else x=0;
+    }
 }
